@@ -1,0 +1,125 @@
+# MSA Commercial thesis — ported from commercial-scout/thesis.yaml.
+# Same numbers; only the file location and channel name change.
+
+geography:
+  counties: [Greene, Christian, Webster, Taney]
+  priority_cities:
+    [Springfield, Ozark, Nixa, Republic, Battlefield, Willard,
+     Strafford, Rogersville, Marshfield, Branson]
+
+assets:
+  whitelist_use_types:
+    - retail
+    - flex
+    - light_industrial
+    - office
+    - medical_office
+    - mixed_use
+    - restaurant_building
+  blacklist_use_types:
+    - land
+    - hospitality
+    - hotel
+    - motel
+    - multifamily
+    - apartment
+    - self_storage
+    - agricultural
+    - gas_station
+    - bank_branch_lease_only
+    - condo
+  blacklist_listing_signals:
+    - going concern
+    - business for sale
+    - business + real estate
+    - turnkey restaurant business
+    - franchise included
+    - inventory included
+    - liquor license included
+
+structural_risk:
+  year_built_threshold: 1920
+
+price_buckets:
+  A: {min_all_in: 400000, max_all_in: 800000}
+  B: {min_all_in: 800000, max_all_in: 1500000}
+
+outside_bucket_exceptions:
+  vacancy_pct_min: 50
+  going_in_cap_min: 0.085
+
+rehab_psf_by_year_built:
+  pre_1960:    50
+  '1960_1979': 35
+  '1980_1999': 20
+  post_2000:   10
+
+closing_cost_pct_of_price: 0.03
+
+acquisition_loc:
+  rate: 0.0575
+  carry_months: 12
+  avg_drawdown_pct: 0.7
+
+permanent_loan:
+  ltv_of_stabilized_value: 0.70
+  rate: 0.0725
+  amort_years: 25
+
+stabilized_rent_psf_by_subtype:
+  small_bay_retail_nnn: {low: 18, high: 25}
+  freestanding_retail:  {low: 14, high: 20}
+  strip_retail:         {low: 13, high: 18}
+  mixed_use:            {low: 14, high: 20}
+  restaurant_building:  {low: 18, high: 24}
+  flex:                 {low: 10, high: 14}
+  light_industrial:     {low: 8,  high: 12}
+  office:               {low: 14, high: 18}
+  medical_office:       {low: 20, high: 26}
+  retail:               {low: 13, high: 18}
+
+opex_pct_of_egi_by_subtype:
+  small_bay_retail_nnn: 0.18
+  freestanding_retail:  0.20
+  strip_retail:         0.22
+  mixed_use:            0.25
+  restaurant_building:  0.22
+  flex:                 0.18
+  light_industrial:     0.15
+  office:               0.30
+  medical_office:       0.25
+  retail:               0.22
+
+stabilized_vacancy_pct: 0.05
+
+property_tax:
+  pct_of_purchase_price: 0.013
+  reassessment_factor:  1.5
+
+market_cap_rates:
+  retail_stabilized: {low: 0.065, high: 0.075}
+  retail_value_add:  {low: 0.075, high: 0.090}
+  office:            {low: 0.075, high: 0.085}
+  flex_industrial:   {low: 0.070, high: 0.085}
+  medical_office:    {low: 0.065, high: 0.075}
+
+kill_criteria:
+  cash_flow_monthly_min:             1000
+  forced_equity_min:                 0.20
+  lease_up_window_months:            12
+  exit_cap_meets_or_beats_going_in:  true
+
+needs_data_required_fields:
+  - price
+  - sqft
+  - year_built
+
+occupancy_inference_rules:
+  sale_leaseback_implies_100:    true
+  owner_user_only_implies_unknown: true
+  default_when_unknown:           85
+
+tag_bumps:
+  oz_flag_lifts_pass_to_watch_if_low_basis: true
+  low_basis_threshold:                       600000
+  optimistic_3_of_4_lifts_to_watch_if_oz:   true
