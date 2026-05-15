@@ -23,107 +23,20 @@ log = get_logger("run_today")
 # ── Pre-fetched email data from Gmail MCP ──────────────────────────────────
 
 EMAILS: list[dict] = [
+    # ── 2026-05-14 batch (fetched live from Gmail MCP) ────────────────────
     {
-        "id": "19e22f9cb7d45fd3",
-        "thread_id": "19e22f9cb7d45fd3",
-        "sender": "skrepistman@sandsig.com",
-        "subject": "Childcare Network - 246+ Unit Operator | 19+ Year NNN  | 2% Annual Increases | Valdosta, GA",
-        "received_at": "2026-05-13T20:03:48Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the 9,720 SF Childcare Network NNN Asset located at 275 Enterprise Drive in Valdosta, GA.
+        "id": "19e281d3e50bba3d",
+        "thread_id": "19e281d3e50bba3d",
+        "sender": "max@sandsig.com",
+        "subject": "Corporate-Backed KinderCare | Minneapolis MSA | 2% Annual Increases",
+        "received_at": "2026-05-14T20:03:44Z",
+        "text_body": """We are pleased to exclusively offer for sale the 11,990 SF KinderCare NNN Asset located at 4025 Benjamin Drive in Minneapolis, MN.
 
-Childcare Network - Valdosta, GA
+KinderCare - Minneapolis, MN
 
 PRICE
 
-$2,285,714
-
-
-CAP RATE
-
-7.00%
-
-SQUARE FOOTAGE
-
-9,720 SF
-
-Investment Highlights
-
-Founded in 1988, Childcare Network operates over 246 schools in the southern United States.
-Positioned along the busy I-75 corridor between Atlanta and Tampa, the Valdosta attracts commuters and visitors from across Southern Georgia and North Florida.
-Located 4 miles from Valdosta Regional Airport and 1.5 hours from Tallahassee International Airport (TLH).
-19+ years remaining on a Triple Net (NNN) Lease with 2% annual rent escalations.
-6 elementary feeder schools within a 5-mile radius.
-
-Investment Advisors
-
-Seth Krepistman
-TX Lic. # 744270
-512.543.7437
-skrepistman@SandsIG.com
-""",
-    },
-    {
-        "id": "19e22baf938ab064",
-        "thread_id": "19e22baf938ab064",
-        "sender": "zboals@sandsig.com",
-        "subject": "For Lease | Turnkey Medical Office | $11.75/SF | Established Patient Traffic",
-        "received_at": "2026-05-13T19:03:56Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for lease the South Drive Medical Office at 117 South Drive in Natchitoches, LA 71457.
-
-FOR LEASE — not for sale. No asking price. Skipping.
-""",
-    },
-    {
-        "id": "19e2288ebc7bfd36",
-        "thread_id": "19e2288ebc7bfd36",
-        "sender": "jliberatore@sandsig.com",
-        "subject": "Just Exercised Option Period | White Castle | Corporate Guarantee | 7% Cap Rate | Columbus MSA",
-        "received_at": "2026-05-13T18:03:48Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the 2,200 SF White Castle Ground Lease located at 24599 US Highway 23 South in Circleville, Ohio, approximately 20 miles south of Columbus.
-
-White Castle - Circleville, OH
-
-PRICE
-
-$628,000
-
-CAP RATE
-
-7.01%
-
-SQUARE FOOTAGE
-
-2,200 SF
-
-Investment Highlights
-
-Corporate Ground Lease Backed by White Castle: Guaranteed by White Castle System, Inc., a national QSR brand operating 345+ locations across 13 states.
-Recently Exercised Option: White Castle recently exercised their option period, showing a strong continued commitment to this site and market.
-3, 1-Year Options Remaining: White Castle has 3, 1-year option periods remaining, each starting July 1, with the potential to extend the lease through June 2030.
-Proven Operating History Since 1999: White Castle has successfully operated at this location for over 25 years, demonstrating long-term commitment.
-High-Traffic US-23 Location: Positioned directly on US Highway 23, a primary north-south retail corridor with 29,000+ vehicles per day.
-Columbus MSA Location: Located approximately 20 miles south of Columbus.
-
-Investment Advisors
-
-Jack Liberatore
-SC Lic. # 140365
-jliberatore@SandsIG.com
-""",
-    },
-    {
-        "id": "19e224e5a76e627e",
-        "thread_id": "19e224e5a76e627e",
-        "sender": "tom@sandsig.com",
-        "subject": "Just Listed | Acadia Healthcare (NASDAQ: ACHC) | 12+ Long-Term NNN | $18.58/ SF",
-        "received_at": "2026-05-13T17:03:59Z",
-        "text_body": """Sands Investment Group is pleased to present exclusively for sale the 8,346 SF Acadia Healthcare NNN Asset located at 175 Philpot Lane in Beckley, WV.
-
-Acadia Healthcare - Beckley, WV
-
-PRICE
-
-$2,297,081
+$5,575,881
 
 CAP RATE
 
@@ -131,72 +44,107 @@ CAP RATE
 
 SQUARE FOOTAGE
 
-8,346 SF
+11,990 SF
 
 Investment Highlights
 
-Acadia Healthcare (NASDAQ: ACHC) is a publicly traded behavioral healthcare company with an approximate market capitalization of $2.27 billion.
-Beckley is the largest city in southern West Virginia and serves as a key economic and service hub for the surrounding Appalachian region.
-Tenant has been in this location since 2016, operating under a grandfathered conditional use permit.
+KinderCare is the largest provider of early education and child care, operating more than 2,700 centers nationwide.
+Minneapolis forms the "Twin Cities" region, combined with Saint Paul, and is the most populous city in the state.
+15 miles from Minneapolis-Saint Paul International Airport (MSP).
+Average household income of $161,697 and a population of 57,861 residents within a 3-mile radius.
+9 elementary feeder schools within a 5-mile radius.
 
 Investment Advisors
 
-Tom Gorman
-WV Lic. # WVB230300887
-610.550.8884
-tom@SandsIG.com
+Max Freedman
+TX Lic. # 644481
+512.766.2711
+max@SandsIG.com
 """,
     },
     {
-        "id": "19e221c441bc29d1",
-        "thread_id": "19e221c441bc29d1",
-        "sender": "stratton@sandsig.com",
-        "subject": "Rare Charleston NNN Industrial | 7% CAP Rate | 3% Annual Increases | North Charleston, SC",
-        "received_at": "2026-05-13T16:03:50Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the 19,500 SF Chugach Government Solutions NNN facility located at 7384-7392 Industry Drive in North Charleston, SC.
+        "id": "19e27e280d90623a",
+        "thread_id": "19e27e280d90623a",
+        "sender": "cmartino@sandsig.com",
+        "subject": "Just Listed | 2-Unit Car Wash Portfolio | Detroit MSA | Strong Cash Flow | Below Replacement Cost",
+        "received_at": "2026-05-14T19:03:54Z",
+        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the Imperial Car Wash Portfolio, comprising of 2 operational car wash facilities in Waterford Township, MI.
 
-Chugach Government Solutions - North Charleston, SC
+Imperial Car Wash Portfolio - Waterford Township, MI
 
 PRICE
 
-$4,650,000
-
-CAP RATE
-
-7.02%
+$5,000,000
 
 SQUARE FOOTAGE
 
-19,500 SF
+11,211 SF
 
 Investment Highlights
 
-Strong Tenant: Chugach Government Solutions is one of the largest providers of construction, facilities management, technical, and education services supporting DoD and federal agencies worldwide.
-Passive Lease Structure: Lease provides very limited landlord responsibilities and strong 3% annual rent escalations.
-Recent Expansion: The tenant recently extended their lease early and expanded at the site.
-Significant Tenant Investment: Over the years, the tenant has made significant capital investments in the building.
+Priced Below Replacement Cost with In-Place Cash Flow: Both sites are operational and revenue-generating with newly installed equipment, offered at a meaningful discount to estimated replacement cost.
+Hard Barrier to New Competition: Waterford Township maintains an active moratorium on new car wash development, directly protecting both sites from new supply within the trade area.
+Major Redevelopment Tailwind at Site 1: Site 1 fronts the 74-acre Oakland County Business Center, a $63M mixed-use redevelopment of the former Summit Place Mall.
+High-Traffic, High-Visibility Corridors: Site 1 sits on Elizabeth Lake Road. Site 2 fronts M-59. Combined exposure to approximately 40,000 VPD.
 
 Investment Advisors
 
-Stratton Greig
-TX Lic. # 738303
-512.910.2665
-stratton@SandsIG.com
+Chase Martino
+CA Lic. # 02309579
+310.241.3677
+cmartino@SandsIG.com
 """,
     },
     {
-        "id": "19e21e04ac62480d",
-        "thread_id": "19e21e04ac62480d",
+        "id": "19e27b17efc45ac0",
+        "thread_id": "19e27b17efc45ac0",
+        "sender": "jmulloy@sandsig.com",
+        "subject": "New Concept | Boost Coffee - ABS NNN | Corporate + Personal Guarantee | Jacksonville, FL",
+        "received_at": "2026-05-14T18:03:49Z",
+        "text_body": """Sands Investment Group is pleased to exclusively present for sale the Boost Coffee Absolute NNN Ground Lease property located at 7253 103rd Street in Jacksonville, FL.
+
+Boost Coffee - Jacksonville, FL
+
+PRICE
+
+$1,950,000
+
+CAP RATE
+
+6.46%
+
+SQUARE FOOTAGE
+
+790 SF
+
+Investment Highlights
+
+Long-Term 15-Year ABS NNN Ground Lease (Zero Landlord Responsibilities): This is a true passive investment featuring a 15-Year Absolute NNN Ground Lease.
+Attractive Rent Escalations & Inflation Hedge: 10% rent increases every 5 years throughout the primary 15-year term.
+Corporate Guarantee From Proven Operators: The lease is backed by a corporate guarantee.
+15 years remaining on lease.
+
+Investment Advisors
+
+Jordan Mulloy
+TX Lic. # 793071
+512.768.0380
+jmulloy@SandsIG.com
+""",
+    },
+    {
+        "id": "19e2775ce24807a6",
+        "thread_id": "19e2775ce24807a6",
         "sender": "agilbert@sandsig.com",
-        "subject": "Just Listed | Parker Chase Preschool of East Roswell - Alpharetta, GA | 100+ Unit Corporate Guarantee | Long-Term NNN",
-        "received_at": "2026-05-13T15:04:00Z",
-        "text_body": """Sands Investment Group is pleased to exclusively present for sale the 12,386 SF Parker-Chase Preschool Absolute NNN of East Roswell, located at 2852 Holcomb Bridge Road in Alpharetta, GA.
+        "subject": "New Listing | Ladybird Academy - Orlando, FL | Corporate & Personal Guarantee | 11+ Years Abs. NNN",
+        "received_at": "2026-05-14T17:03:53Z",
+        "text_body": """Sands Investment Group is pleased to present exclusively for sale the 11,732 SF KinderCare Absolute NNN Asset located at 8730 Nesbit Ferry Road in Alpharetta, GA.
 
-Parker-Chase Preschool of East Roswell - Alpharetta, GA
+Ladybird Academy - Orlando, FL
 
 PRICE
 
-$5,918,415
+$7,142,576
 
 CAP RATE
 
@@ -204,13 +152,13 @@ CAP RATE
 
 SQUARE FOOTAGE
 
-12,386 SF
+12,184 SF
 
 Investment Highlights
 
-Corporately backed by Endeavor Schools, one of the fastest-growing early education brands in the country, with over 100 locations nationally since its founding in 2012.
-This asset is 100% leased to Parker-Chase Preschool on an Absolute NNN Lease with ~14 years remaining, featuring 1.75% annual rental escalations and 4, 5-year renewal options.
-Direct access to GA-400 enables seamless connectivity to major employment hubs.
+This location is a rare, corporately operated Ladybird Academy. Ladybird Academy operates 22+ locations throughout Florida and has been in business since 2002.
+This asset is 100% leased to Ladybird Academy on an Absolute Triple Net (NNN) Lease with 11+ years remaining, featuring above-market annual rental escalations and two rare 10-year renewal options.
+Total consumer spending on education and daycare exceeds $100 million annually within a 5-mile radius.
 
 Investment Advisors
 
@@ -221,70 +169,129 @@ agilbert@SandsIG.com
 """,
     },
     {
-        "id": "19e21b21f6434acd",
-        "thread_id": "19e21b21f6434acd",
-        "sender": "dcoyle@sandsig.com",
-        "subject": "Generational Grocery Asset | Recent Lease Extension & Major Renovations | Below-Market Financing",
-        "received_at": "2026-05-13T14:03:52Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer the 66,272 SF Stop & Shop NNN Asset located along the primary retail corridor connecting Main and Broad Streets.
+        "id": "19e271f88bf2baff",
+        "thread_id": "19e271f88bf2baff",
+        "sender": "info@sandsig.com",
+        "subject": "Last Chance to Book a Meeting with SIG at ICSC Las Vegas",
+        "received_at": "2026-05-14T15:33:58Z",
+        "text_body": """Andrew, let's make in person deals happen!
 
-Stop & Shop - Westfield, MA
+Come meet the SIG team at ICSC Las Vegas. Book a meeting today.
 
-PRICE
-
-$9,327,170
-
-CAP RATE
-
-6.75%
-
-SQUARE FOOTAGE
-
-66,272 SF
-
-Investment Highlights
-
-Proven Grocer with 25-Year Track Record: Stop & Shop has successfully operated at this location since 2000, making it a true generational grocery asset.
-Recent Lease Extension: The tenant exercised its renewal option in 2024, extending the lease through September 2030.
-Investment-Grade Credit Backing: The lease is corporately guaranteed by Ahold Delhaize (BBB+/Baa1), one of the largest grocery operators in the world.
-Premier Downtown Location: The site commands strong visibility in the heart of downtown Westfield.
-
-Investment Advisors
-
-Dan Coyle
-TN Lic. # 382052
-615.235.3548
-dcoyle@SandsIG.com
+Sands Investment Group
 """,
     },
     {
-        "id": "19e2172682145df0",
-        "thread_id": "19e2172682145df0",
-        "sender": "zfriedman@sandsig.com",
-        "subject": "Just Listed | Retail Development Site | ±32,000 SF - Lot can be Subdivided | High-Traffic | Georgia",
-        "received_at": "2026-05-13T13:04:01Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale a Retail Center Development Asset opportunity located at 2984 Peachtree Parkway in Suwanee, GA.
+        "id": "19e27074d5020b94",
+        "thread_id": "19e27074d5020b94",
+        "sender": "mcoleman@sandsig.com",
+        "subject": "Just Listed | Bojangles - Columbia, SC | Corporate Guarantee | 108K+ VPD | 30 Years of Operational History",
+        "received_at": "2026-05-14T15:04:06Z",
+        "text_body": """Sands Investment Group is pleased to exclusively present for sale the 4,236 SF Bojangles Absolute NNN Asset located at 2423 Broad River Road in Columbia, SC.
 
-Retail Center Development - Suwanee, GA
+Bojangles - Columbia, SC
 
 PRICE
 
-Lot Can Be Subdivided - Contact Broker For Pricing
+$2,549,089
+
+CAP RATE
+
+6.15%
+
+SQUARE FOOTAGE
+
+4,236 SF
 
 Investment Highlights
 
-Approved site plans for a +/- 32,000 SF anchor tenants and six individual lots with Peachtree Parkway frontage.
-46,400 VPD along +/- 1,300 linear feet of frontage on Peachtree Parkway.
-Zoned CBD allowing retail, restaurant, bank, daycare, service, and office use.
-Future traffic light at Bagley Drive & Peachtree Parkway for controlled access.
-Publix Plaza and Target & Home Depot Center are within a half-mile.
+6+ years remaining on an Absolute NNN Lease with 8% increases at each 3 x 5-year option.
+Restaurant has operated at this location for more than 30 years.
+Strong corporate guarantee from one of the leading brands in chicken QSR, with over 800 units and growing.
+Located directly along Broad River Road, which sees over 38,600 vehicles per day.
+Less than 1 mile from Interstate 20 with over 108,000 VPD.
 
 Investment Advisors
 
-Zach Friedman
-FL Lic. # SL3643776
-954.902.5256
-zfriedman@SandsIG.com
+Mitchell Coleman
+GA Lic. # 444363
+843.931.9580
+mcoleman@SandsIG.com
+""",
+    },
+    {
+        "id": "19e26d3d1bbfaacd",
+        "thread_id": "19e26d3d1bbfaacd",
+        "sender": "bpugh@sandsig.com",
+        "subject": "7.13% Cap Rate | 3% Annual Rent Increases | 9 Years of Term Remaining",
+        "received_at": "2026-05-14T14:03:48Z",
+        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the 24,550 SF Joe Hudson's Collision Center and Baker's Towing & Recovery located at 3327 & 3407 S Lake Drive in Texarkana, Texas.
+
+Gerber Collision & Glass and Baker's Towing - Texarkana, TX
+
+PRICE
+
+$3,173,000
+
+CAP RATE
+
+7.13%
+
+SQUARE FOOTAGE
+
+24,550 SF
+
+Investment Highlights
+
+Strong Anchor Tenant Net Lease: Collision center occupied by Gerber Collision & Glass, a multi-location national collision repair operator with 1300+ locations. Gerber operates under The Boyd Group Services Inc. (BGSI).
+Baker's Towing & Recovery: Baker's Towing operates one of the most comprehensive heavy-duty fleets in the Texarkana region.
+Double Net (NN) Leases: Minimal landlord responsibilities with stable in-place income across both.
+9 years of term remaining across both leases with 3% annual rent increases.
+Prime Automotive Corridor: Located along S Lake Drive (State Highway 93).
+
+Investment Advisors
+
+Bryce Pugh
+NC Lic. # 347566
+704.912.5085
+bpugh@SandsIG.com
+""",
+    },
+    {
+        "id": "19e269bc50e3d684",
+        "thread_id": "19e269bc50e3d684",
+        "sender": "hkirby@sandsig.com",
+        "subject": "Just Listed | National Credit Tenant - White Cap | 550+ Locations | 7.67% CAP",
+        "received_at": "2026-05-14T13:03:56Z",
+        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the White Cap Industrial NNN Asset located in Flint, MI.
+
+White Cap (Colony Hardware) - Flint, MI
+
+PRICE
+
+$900,000
+
+CAP RATE
+
+7.67%
+
+SQUARE FOOTAGE
+
+12,300 SF
+
+Investment Highlights
+
+National Credit Tenant: White Cap is one of the largest distributors of building materials, specialty construction supplies, and safety products in North America, with over 550+ locations.
+Strategic Acquisition: White Cap officially acquired Colony Hardware to expand its geographic footprint in the Northeast, Midwest, and Florida.
+Strategically Located: This facility is located right off Robert T Longway Boulevard (which sees over 14,000 vehicles per day), highly accessible to I-475.
+Healthy Rent: This asset features slightly under-market rent, presenting potential future upside for investors.
+
+Investment Advisors
+
+Hunter Kirby
+TX Lic. # 843738
+512.856.7596
+hkirby@SandsIG.com
 """,
     },
 ]
@@ -311,54 +318,62 @@ def _enrich_body(entry: dict) -> str:
 
 # Machine-readable KV extracted from the email bodies.
 KNOWN_META: dict[str, dict] = {
-    "19e22f9cb7d45fd3": {
-        "Sale Price": "$2,285,714",
-        "Cap Rate": "7.00%",
-        "Building Size": "9720 SF",
-        "Tenant": "Childcare Network",
+    # 2026-05-14 batch
+    "19e281d3e50bba3d": {
+        "Sale Price": "$5,575,881",
+        "Cap Rate": "6.75%",
+        "Building Size": "11990 SF",
+        "Tenant": "KinderCare",
         "Lease Type": "NNN",
         "Rent Escalator": "2%",
-        "Lease Term": "19 years",
     },
-    "19e2288ebc7bfd36": {
-        "Sale Price": "$628,000",
-        "Cap Rate": "7.01%",
-        "Building Size": "2200 SF",
-        "Tenant": "White Castle",
+    "19e27e280d90623a": {
+        "Sale Price": "$5,000,000",
+        "Building Size": "11211 SF",
+        "Tenant": "Imperial Car Wash",
+        "Lease Type": "None",
+    },
+    "19e27b17efc45ac0": {
+        "Sale Price": "$1,950,000",
+        "Cap Rate": "6.46%",
+        "Building Size": "790 SF",
+        "Tenant": "Boost Coffee",
         "Lease Type": "Ground Lease",
+        "Lease Term": "15 years",
     },
-    "19e224e5a76e627e": {
-        "Sale Price": "$2,297,081",
+    "19e2775ce24807a6": {
+        "Sale Price": "$7,142,576",
         "Cap Rate": "6.75%",
-        "Building Size": "8346 SF",
-        "Tenant": "Acadia Healthcare",
-        "Lease Type": "NNN",
+        "Building Size": "12184 SF",
+        "Tenant": "Ladybird Academy",
+        "Lease Type": "Absolute NNN",
+        "Lease Term": "11 years",
     },
-    "19e221c441bc29d1": {
-        "Sale Price": "$4,650,000",
-        "Cap Rate": "7.02%",
-        "Building Size": "19500 SF",
-        "Tenant": "Chugach Government Solutions",
-        "Lease Type": "NNN",
+    # 19e271f88bf2baff: ICSC marketing event email — no listing
+    "19e27074d5020b94": {
+        "Sale Price": "$2,549,089",
+        "Cap Rate": "6.15%",
+        "Building Size": "4236 SF",
+        "Tenant": "Bojangles",
+        "Lease Type": "Absolute NNN",
+        "Lease Term": "6 years",
+    },
+    "19e26d3d1bbfaacd": {
+        "Sale Price": "$3,173,000",
+        "Cap Rate": "7.13%",
+        "Building Size": "24550 SF",
+        "Tenant": "Gerber Collision & Glass / Baker's Towing",
+        "Lease Type": "NN",
+        "Lease Term": "9 years",
         "Rent Escalator": "3%",
     },
-    "19e21e04ac62480d": {
-        "Sale Price": "$5,918,415",
-        "Cap Rate": "6.75%",
-        "Building Size": "12386 SF",
-        "Tenant": "Parker-Chase Preschool",
-        "Lease Type": "Absolute NNN",
-        "Rent Escalator": "1.75%",
-        "Lease Term": "14 years",
-    },
-    "19e21b21f6434acd": {
-        "Sale Price": "$9,327,170",
-        "Cap Rate": "6.75%",
-        "Building Size": "66272 SF",
-        "Tenant": "Stop & Shop",
+    "19e269bc50e3d684": {
+        "Sale Price": "$900,000",
+        "Cap Rate": "7.67%",
+        "Building Size": "12300 SF",
+        "Tenant": "White Cap",
         "Lease Type": "NNN",
     },
-    # 19e22baf938ab064 (For Lease — skip) and 19e2172682145df0 (no price) omitted
 }
 
 
@@ -415,7 +430,7 @@ def main() -> int:
     messages = build_messages()
     client = PreloadedGmailClient(messages, draft_out)
 
-    since = datetime(2026, 5, 13, 0, 0, 0, tzinfo=timezone.utc)
+    since = datetime(2026, 5, 14, 0, 0, 0, tzinfo=timezone.utc)
     summary = pipeline.run(
         client=client,
         since=since,
