@@ -21,286 +21,133 @@ configure_logging()
 log = get_logger("run_today")
 
 # ── Pre-fetched email data from Gmail MCP ──────────────────────────────────
+# Fetched live 2026-05-16 via Gmail MCP newer_than:1d from all broker domains.
 
 EMAILS: list[dict] = [
-    # ── 2026-05-14 batch (fetched live from Gmail MCP) ────────────────────
+    # ── 2026-05-15 batch ──────────────────────────────────────────────────
     {
-        "id": "19e281d3e50bba3d",
-        "thread_id": "19e281d3e50bba3d",
-        "sender": "max@sandsig.com",
-        "subject": "Corporate-Backed KinderCare | Minneapolis MSA | 2% Annual Increases",
-        "received_at": "2026-05-14T20:03:44Z",
-        "text_body": """We are pleased to exclusively offer for sale the 11,990 SF KinderCare NNN Asset located at 4025 Benjamin Drive in Minneapolis, MN.
-
-KinderCare - Minneapolis, MN
-
-PRICE
-
-$5,575,881
-
-CAP RATE
-
-6.75%
-
-SQUARE FOOTAGE
-
-11,990 SF
-
-Investment Highlights
-
-KinderCare is the largest provider of early education and child care, operating more than 2,700 centers nationwide.
-Minneapolis forms the "Twin Cities" region, combined with Saint Paul, and is the most populous city in the state.
-15 miles from Minneapolis-Saint Paul International Airport (MSP).
-Average household income of $161,697 and a population of 57,861 residents within a 3-mile radius.
-9 elementary feeder schools within a 5-mile radius.
-
-Investment Advisors
-
-Max Freedman
-TX Lic. # 644481
-512.766.2711
-max@SandsIG.com
-""",
+        "id": "19e2cd54420a63f6",
+        "thread_id": "19e2cd54420a63f6",
+        "sender": "jliberatore@sandsig.com",
+        "subject": "Advance Auto Parts | 20% Rent Increase at 1st Option | Prime Michigan Location",
+        "received_at": "2026-05-15T18:03:42Z",
+        "text_body": (
+            "Sands Investment Group is Pleased to Exclusively Offer For Sale the 7,000 SF "
+            "Advance Auto Parts NN Asset Located at 3701 I-75 Business Spur in Sault Sainte Marie, MI.\n\n"
+            "Advance Auto Parts - Sault Ste. Marie, MI\n\n"
+            "PRICE\n\n$1,020,250\n\n"
+            "CAP RATE\n\n8.00%\n\n"
+            "SQUARE FOOTAGE\n\n7,000 SF\n\n"
+            "Investment Highlights\n\n"
+            "The Lease is Backed By Advance Auto Parts, a Company With an Investment-Grade Credit Rating of BB+ From S&P.\n"
+            "Lease Includes a Significant 20% Rent Increase at the Beginning of the First Option Period.\n"
+            "Within a 3-Mile Radius, Sault Sainte Marie Features a Demographic Profile of 4,786 Residents.\n\n"
+            "Investment Advisors\n\nJack Liberatore\njliberatore@SandsIG.com\n843.510.0551\n"
+        ),
     },
     {
-        "id": "19e27e280d90623a",
-        "thread_id": "19e27e280d90623a",
+        "id": "19e2c9bb59da3fa4",
+        "thread_id": "19e2c9bb59da3fa4",
+        "sender": "ethan@sandsig.com",
+        "subject": "Just Listed | 8.99% CAP | Value-Add Shopping Center | Off I-12 | $71.42/SF",
+        "received_at": "2026-05-15T17:03:58Z",
+        "text_body": (
+            "Sands Investment Group is pleased to exclusively offer for sale the 64,686 SF "
+            "Country Club Plaza Asset located at 803-865 Brownswitch Road in Slidell, LA.\n\n"
+            "Country Club Plaza - Slidell, LA\n\n"
+            "PRICE\n\n$4,620,000\n\n"
+            "CAP RATE\n\n8.99%\n\n"
+            "SQUARE FOOTAGE\n\n64,686 SF\n\n"
+            "Investment Highlights\n\n"
+            "Competitively Priced: Offered at an 8.99% CAP Rate.\n"
+            "Attractive Assumable Debt: 6% interest rate until 12/31/2027, offering a 10.11% cash-on-cash return.\n"
+            "Value Add - Lease Up: By leasing 15% of the vacant units, the CAP Rate can be increased to over 10.11%.\n"
+            "Strong Tenancy: Club4 Fitness on a long-term lease, Dollar General and Buffalo Wild Wings since 2000.\n\n"
+            "Investment Advisors\n\nEthan Offenbecher\nethan@SandsIG.com\n737.205.2056\n"
+        ),
+    },
+    {
+        "id": "19e2c69c0a3d5cc5",
+        "thread_id": "19e2c69c0a3d5cc5",
+        "sender": "jmansour@sandsig.com",
+        "subject": "Meineke | Long-Term 15 Yr NNN | Strong Retail Synergy | Philadelphia MSA",
+        "received_at": "2026-05-15T16:03:40Z",
+        "text_body": (
+            "Sands Investment Group is pleased to exclusively offer for sale the 4,104 SF "
+            "Meineke NNN Asset located at 630 S West End Boulevard in Quakertown, PA.\n\n"
+            "Meineke - Quakertown, PA\n\n"
+            "PRICE\n\n$2,043,796\n\n"
+            "CAP RATE\n\n6.85%\n\n"
+            "SQUARE FOOTAGE\n\n4,104 SF\n\n"
+            "Investment Highlights\n\n"
+            "National Name Brand Tenant: Leased to Meineke, a nationally recognized automotive repair brand with over 900 locations.\n"
+            "Attractive Passive Investment: Long-term 15-year Triple Net (NNN) Lease structure that provides ownership with zero management responsibilities.\n\n"
+            "Investment Advisors\n\nJohn Mansour\njmansour@SandsIG.com\n512.543.4828\n"
+        ),
+    },
+    {
+        "id": "19e2c2c69d18fc74",
+        "thread_id": "19e2c2c69d18fc74",
         "sender": "cmartino@sandsig.com",
-        "subject": "Just Listed | 2-Unit Car Wash Portfolio | Detroit MSA | Strong Cash Flow | Below Replacement Cost",
-        "received_at": "2026-05-14T19:03:54Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the Imperial Car Wash Portfolio, comprising of 2 operational car wash facilities in Waterford Township, MI.
-
-Imperial Car Wash Portfolio - Waterford Township, MI
-
-PRICE
-
-$5,000,000
-
-SQUARE FOOTAGE
-
-11,211 SF
-
-Investment Highlights
-
-Priced Below Replacement Cost with In-Place Cash Flow: Both sites are operational and revenue-generating with newly installed equipment, offered at a meaningful discount to estimated replacement cost.
-Hard Barrier to New Competition: Waterford Township maintains an active moratorium on new car wash development, directly protecting both sites from new supply within the trade area.
-Major Redevelopment Tailwind at Site 1: Site 1 fronts the 74-acre Oakland County Business Center, a $63M mixed-use redevelopment of the former Summit Place Mall.
-High-Traffic, High-Visibility Corridors: Site 1 sits on Elizabeth Lake Road. Site 2 fronts M-59. Combined exposure to approximately 40,000 VPD.
-
-Investment Advisors
-
-Chase Martino
-CA Lic. # 02309579
-310.241.3677
-cmartino@SandsIG.com
-""",
+        "subject": "New Listing | Cleveland MSA Car Wash Portfolio | 2 Infill Locations | $3.5M",
+        "received_at": "2026-05-15T15:03:56Z",
+        "text_body": (
+            "Sands Investment Group is pleased to exclusively offer for sale the Imperial Car Wash Portfolio, "
+            "comprising of 2 operational car wash facilities in Waterford Township, MI.\n\n"
+            "Wash N Go Portfolio - Bedford, OH\n\n"
+            "PRICE\n\n$3,500,000\n\n"
+            "SQUARE FOOTAGE\n\n8,692 SF\n\n"
+            "Investment Highlights\n\n"
+            "Priced Below Replacement Cost: At $3.5M for two operational facilities on a 20,000 VPD infill arterial.\n"
+            "Fee-Simple Real Estate on a Dominant Retail Corridor: Both parcels are offered fee-simple on Northfield Road.\n"
+            "High-Traffic, Captive Customer Base: approximately 20,000 VPD passing each site.\n"
+            "Proximity to Major Regional Traffic Generators: including MGM Northfield Park.\n\n"
+            "Investment Advisors\n\nChase Martino\ncmartino@SandsIG.com\n310.241.3677\n"
+        ),
     },
     {
-        "id": "19e27b17efc45ac0",
-        "thread_id": "19e27b17efc45ac0",
-        "sender": "jmulloy@sandsig.com",
-        "subject": "New Concept | Boost Coffee - ABS NNN | Corporate + Personal Guarantee | Jacksonville, FL",
-        "received_at": "2026-05-14T18:03:49Z",
-        "text_body": """Sands Investment Group is pleased to exclusively present for sale the Boost Coffee Absolute NNN Ground Lease property located at 7253 103rd Street in Jacksonville, FL.
-
-Boost Coffee - Jacksonville, FL
-
-PRICE
-
-$1,950,000
-
-CAP RATE
-
-6.46%
-
-SQUARE FOOTAGE
-
-790 SF
-
-Investment Highlights
-
-Long-Term 15-Year ABS NNN Ground Lease (Zero Landlord Responsibilities): This is a true passive investment featuring a 15-Year Absolute NNN Ground Lease.
-Attractive Rent Escalations & Inflation Hedge: 10% rent increases every 5 years throughout the primary 15-year term.
-Corporate Guarantee From Proven Operators: The lease is backed by a corporate guarantee.
-15 years remaining on lease.
-
-Investment Advisors
-
-Jordan Mulloy
-TX Lic. # 793071
-512.768.0380
-jmulloy@SandsIG.com
-""",
+        "id": "19e2bfda89eca919",
+        "thread_id": "19e2bfda89eca919",
+        "sender": "jlevine@sandsig.com",
+        "subject": "Mixed-Use Center with Significant Upside | 40% Below-Market Rents | Major Vacation Destination",
+        "received_at": "2026-05-15T14:03:48Z",
+        "text_body": (
+            "We are pleased to exclusively offer for sale the Lakewatch Retail Center Asset at "
+            "50-60 Firstwatch Drive, a 21,360 SF property situated in the affluent trade area of Moneta, VA.\n\n"
+            "Lakewatch Retail Center - Moneta, VA\n\n"
+            "PRICE\n\n$2,500,000\n\n"
+            "CAP RATE\n\n7.26%\n\n"
+            "SQUARE FOOTAGE\n\n21,360 SF\n\n"
+            "Investment Highlights\n\n"
+            "40% Below-Market Rents: Significant upside through lease-up, renewals, and re-tenanting.\n"
+            "Affluent Trade Area: AHHI $124,000+, driven by permanent residents, lake-home owners, and retirees.\n"
+            "Strong Tenant Mix: Includes national brand Domino's, providing stability.\n\n"
+            "Investment Advisors\n\nJack Levine\njlevine@SandsIG.com\n954.902.5257\n"
+        ),
     },
     {
-        "id": "19e2775ce24807a6",
-        "thread_id": "19e2775ce24807a6",
-        "sender": "agilbert@sandsig.com",
-        "subject": "New Listing | Ladybird Academy - Orlando, FL | Corporate & Personal Guarantee | 11+ Years Abs. NNN",
-        "received_at": "2026-05-14T17:03:53Z",
-        "text_body": """Sands Investment Group is pleased to present exclusively for sale the 11,732 SF KinderCare Absolute NNN Asset located at 8730 Nesbit Ferry Road in Alpharetta, GA.
-
-Ladybird Academy - Orlando, FL
-
-PRICE
-
-$7,142,576
-
-CAP RATE
-
-6.75%
-
-SQUARE FOOTAGE
-
-12,184 SF
-
-Investment Highlights
-
-This location is a rare, corporately operated Ladybird Academy. Ladybird Academy operates 22+ locations throughout Florida and has been in business since 2002.
-This asset is 100% leased to Ladybird Academy on an Absolute Triple Net (NNN) Lease with 11+ years remaining, featuring above-market annual rental escalations and two rare 10-year renewal options.
-Total consumer spending on education and daycare exceeds $100 million annually within a 5-mile radius.
-
-Investment Advisors
-
-Drew Gilbert
-SC Lic. # 136866
-843.212.9319
-agilbert@SandsIG.com
-""",
-    },
-    {
-        "id": "19e271f88bf2baff",
-        "thread_id": "19e271f88bf2baff",
-        "sender": "info@sandsig.com",
-        "subject": "Last Chance to Book a Meeting with SIG at ICSC Las Vegas",
-        "received_at": "2026-05-14T15:33:58Z",
-        "text_body": """Andrew, let's make in person deals happen!
-
-Come meet the SIG team at ICSC Las Vegas. Book a meeting today.
-
-Sands Investment Group
-""",
-    },
-    {
-        "id": "19e27074d5020b94",
-        "thread_id": "19e27074d5020b94",
-        "sender": "mcoleman@sandsig.com",
-        "subject": "Just Listed | Bojangles - Columbia, SC | Corporate Guarantee | 108K+ VPD | 30 Years of Operational History",
-        "received_at": "2026-05-14T15:04:06Z",
-        "text_body": """Sands Investment Group is pleased to exclusively present for sale the 4,236 SF Bojangles Absolute NNN Asset located at 2423 Broad River Road in Columbia, SC.
-
-Bojangles - Columbia, SC
-
-PRICE
-
-$2,549,089
-
-CAP RATE
-
-6.15%
-
-SQUARE FOOTAGE
-
-4,236 SF
-
-Investment Highlights
-
-6+ years remaining on an Absolute NNN Lease with 8% increases at each 3 x 5-year option.
-Restaurant has operated at this location for more than 30 years.
-Strong corporate guarantee from one of the leading brands in chicken QSR, with over 800 units and growing.
-Located directly along Broad River Road, which sees over 38,600 vehicles per day.
-Less than 1 mile from Interstate 20 with over 108,000 VPD.
-
-Investment Advisors
-
-Mitchell Coleman
-GA Lic. # 444363
-843.931.9580
-mcoleman@SandsIG.com
-""",
-    },
-    {
-        "id": "19e26d3d1bbfaacd",
-        "thread_id": "19e26d3d1bbfaacd",
-        "sender": "bpugh@sandsig.com",
-        "subject": "7.13% Cap Rate | 3% Annual Rent Increases | 9 Years of Term Remaining",
-        "received_at": "2026-05-14T14:03:48Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the 24,550 SF Joe Hudson's Collision Center and Baker's Towing & Recovery located at 3327 & 3407 S Lake Drive in Texarkana, Texas.
-
-Gerber Collision & Glass and Baker's Towing - Texarkana, TX
-
-PRICE
-
-$3,173,000
-
-CAP RATE
-
-7.13%
-
-SQUARE FOOTAGE
-
-24,550 SF
-
-Investment Highlights
-
-Strong Anchor Tenant Net Lease: Collision center occupied by Gerber Collision & Glass, a multi-location national collision repair operator with 1300+ locations. Gerber operates under The Boyd Group Services Inc. (BGSI).
-Baker's Towing & Recovery: Baker's Towing operates one of the most comprehensive heavy-duty fleets in the Texarkana region.
-Double Net (NN) Leases: Minimal landlord responsibilities with stable in-place income across both.
-9 years of term remaining across both leases with 3% annual rent increases.
-Prime Automotive Corridor: Located along S Lake Drive (State Highway 93).
-
-Investment Advisors
-
-Bryce Pugh
-NC Lic. # 347566
-704.912.5085
-bpugh@SandsIG.com
-""",
-    },
-    {
-        "id": "19e269bc50e3d684",
-        "thread_id": "19e269bc50e3d684",
-        "sender": "hkirby@sandsig.com",
-        "subject": "Just Listed | National Credit Tenant - White Cap | 550+ Locations | 7.67% CAP",
-        "received_at": "2026-05-14T13:03:56Z",
-        "text_body": """Sands Investment Group is pleased to exclusively offer for sale the White Cap Industrial NNN Asset located in Flint, MI.
-
-White Cap (Colony Hardware) - Flint, MI
-
-PRICE
-
-$900,000
-
-CAP RATE
-
-7.67%
-
-SQUARE FOOTAGE
-
-12,300 SF
-
-Investment Highlights
-
-National Credit Tenant: White Cap is one of the largest distributors of building materials, specialty construction supplies, and safety products in North America, with over 550+ locations.
-Strategic Acquisition: White Cap officially acquired Colony Hardware to expand its geographic footprint in the Northeast, Midwest, and Florida.
-Strategically Located: This facility is located right off Robert T Longway Boulevard (which sees over 14,000 vehicles per day), highly accessible to I-475.
-Healthy Rent: This asset features slightly under-market rent, presenting potential future upside for investors.
-
-Investment Advisors
-
-Hunter Kirby
-TX Lic. # 843738
-512.856.7596
-hkirby@SandsIG.com
-""",
+        "id": "19e2bc8f23563935",
+        "thread_id": "19e2bc8f23563935",
+        "sender": "jharris@sandsig.com",
+        "subject": "Price Reduction | Former Family Dollar | High-Traffic | Near Naval Base - Growing Market",
+        "received_at": "2026-05-15T13:04:02Z",
+        "text_body": (
+            "Sands Investment Group is pleased to exclusively offer for sale the 7,810 SF "
+            "former Family Dollar Asset located at 649 S. Lee Street in Kingsland, Georgia.\n\n"
+            "Former Family Dollar - Kingsland, GA\n\n"
+            "PRICE\n\n$999,000\n\n"
+            "SQUARE FOOTAGE\n\n7,810 SF\n\n"
+            "Investment Highlights\n\n"
+            "Strategic Location: Positioned along S. Lee Street with strong visibility in Kingsland.\n"
+            "High-Traffic Corridor: Benefits from consistent daily traffic.\n"
+            "Growing Market: Kingsland is experiencing steady population and economic growth.\n"
+            "Versatile Property Use: Suitable for a variety of retail or service-based operations.\n\n"
+            "Investment Advisors\n\nJessica Harris\njharris@SandsIG.com\n954.902.5255\n"
+        ),
     },
 ]
 
 # ── Inject canonical fields known from the email body ─────────────────────
-# The generic parser needs LABEL: value pairs. The Sands IG blasts use a
-# two-line format (label then value on separate lines).  We patch the text
-# body here to inject colon-separated KV lines that the parser can pick up,
-# preserving all original content.
 
 def _enrich_body(entry: dict) -> str:
     """Prepend machine-readable KV block extracted from the known-good data."""
@@ -318,61 +165,48 @@ def _enrich_body(entry: dict) -> str:
 
 # Machine-readable KV extracted from the email bodies.
 KNOWN_META: dict[str, dict] = {
-    # 2026-05-14 batch
-    "19e281d3e50bba3d": {
-        "Sale Price": "$5,575,881",
-        "Cap Rate": "6.75%",
-        "Building Size": "11990 SF",
-        "Tenant": "KinderCare",
-        "Lease Type": "NNN",
-        "Rent Escalator": "2%",
+    # 2026-05-15 batch
+    "19e2cd54420a63f6": {
+        "Sale Price": "$1,020,250",
+        "Cap Rate": "8.00%",
+        "Building Size": "7000 SF",
+        "Tenant": "Advance Auto Parts",
+        "Lease Type": "NN",
     },
-    "19e27e280d90623a": {
-        "Sale Price": "$5,000,000",
-        "Building Size": "11211 SF",
-        "Tenant": "Imperial Car Wash",
+    "19e2c9bb59da3fa4": {
+        "Sale Price": "$4,620,000",
+        "Cap Rate": "8.99%",
+        "Building Size": "64686 SF",
+        "Tenant": "Country Club Plaza (multi-tenant retail)",
         "Lease Type": "None",
     },
-    "19e27b17efc45ac0": {
-        "Sale Price": "$1,950,000",
-        "Cap Rate": "6.46%",
-        "Building Size": "790 SF",
-        "Tenant": "Boost Coffee",
-        "Lease Type": "Ground Lease",
+    "19e2c69c0a3d5cc5": {
+        "Sale Price": "$2,043,796",
+        "Cap Rate": "6.85%",
+        "Building Size": "4104 SF",
+        "Tenant": "Meineke",
+        "Lease Type": "NNN",
         "Lease Term": "15 years",
     },
-    "19e2775ce24807a6": {
-        "Sale Price": "$7,142,576",
-        "Cap Rate": "6.75%",
-        "Building Size": "12184 SF",
-        "Tenant": "Ladybird Academy",
-        "Lease Type": "Absolute NNN",
-        "Lease Term": "11 years",
+    # 19e2c2c69d18fc74: car wash portfolio — no NNN lease, fee-simple owner-op
+    "19e2c2c69d18fc74": {
+        "Sale Price": "$3,500,000",
+        "Building Size": "8692 SF",
+        "Tenant": "Wash N Go (owner-op car wash)",
+        "Lease Type": "None",
     },
-    # 19e271f88bf2baff: ICSC marketing event email — no listing
-    "19e27074d5020b94": {
-        "Sale Price": "$2,549,089",
-        "Cap Rate": "6.15%",
-        "Building Size": "4236 SF",
-        "Tenant": "Bojangles",
-        "Lease Type": "Absolute NNN",
-        "Lease Term": "6 years",
+    "19e2bfda89eca919": {
+        "Sale Price": "$2,500,000",
+        "Cap Rate": "7.26%",
+        "Building Size": "21360 SF",
+        "Tenant": "Lakewatch Retail Center (multi-tenant)",
+        "Lease Type": "None",
     },
-    "19e26d3d1bbfaacd": {
-        "Sale Price": "$3,173,000",
-        "Cap Rate": "7.13%",
-        "Building Size": "24550 SF",
-        "Tenant": "Gerber Collision & Glass / Baker's Towing",
-        "Lease Type": "NN",
-        "Lease Term": "9 years",
-        "Rent Escalator": "3%",
-    },
-    "19e269bc50e3d684": {
-        "Sale Price": "$900,000",
-        "Cap Rate": "7.67%",
-        "Building Size": "12300 SF",
-        "Tenant": "White Cap",
-        "Lease Type": "NNN",
+    "19e2bc8f23563935": {
+        "Sale Price": "$999,000",
+        "Building Size": "7810 SF",
+        "Tenant": "Former Family Dollar (vacant)",
+        "Lease Type": "None",
     },
 }
 
@@ -426,11 +260,13 @@ def build_messages() -> list[EmailMessage]:
 def main() -> int:
     db.migrate()
     draft_out = Path("data/draft_request.json")
+    draft_out.unlink(missing_ok=True)
 
     messages = build_messages()
     client = PreloadedGmailClient(messages, draft_out)
 
-    since = datetime(2026, 5, 14, 0, 0, 0, tzinfo=timezone.utc)
+    # No prior run_log — default window is last 24h (since 2026-05-15 11:30 UTC)
+    since = datetime(2026, 5, 15, 11, 30, 0, tzinfo=timezone.utc)
     summary = pipeline.run(
         client=client,
         since=since,
