@@ -82,7 +82,7 @@ class SandsIgParser(GenericBrokerEmailParser):
         return "car_wash_nnn"
 
     def _parse_body(self, message: EmailMessage) -> tuple[Listing | None, list[str]]:
-        text = (message.text_body or "").replace("\xa0", " ")
+        text = (message.text_body or "").replace("\xa0", " ").replace("‌", "")
         warnings: list[str] = []
 
         # Skip "For Lease" blasts — we want for-sale only.
