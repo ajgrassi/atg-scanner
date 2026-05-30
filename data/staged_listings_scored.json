@@ -32,7 +32,16 @@
       "broker_email_subject": "Price Reduced - 7.15% CAP | Long-Term Pizza Hut | NNN - Under $1M | Top 20% Nationwide"
     },
     "first_seen": null,
-    "last_seen": null
+    "last_seen": null,
+    "score": 0,
+    "verdict": "STRUCTURAL_FAIL",
+    "structural_failures": [
+      "lease_type=nnn_not_absolute_nnn",
+      "not_bonus_dep_eligible",
+      "roof=None_not_tenant"
+    ],
+    "score_components": {},
+    "score_notes": []
   },
   {
     "source": "sands_ig",
@@ -67,7 +76,16 @@
       "broker_email_subject": "Exxon Gas Station | Short Term Fuel Contract"
     },
     "first_seen": null,
-    "last_seen": null
+    "last_seen": null,
+    "score": 0,
+    "verdict": "STRUCTURAL_FAIL",
+    "structural_failures": [
+      "lease_type=None_not_absolute_nnn",
+      "not_bonus_dep_eligible",
+      "roof=None_not_tenant"
+    ],
+    "score_components": {},
+    "score_notes": []
   },
   {
     "source": "sands_ig",
@@ -102,7 +120,15 @@
       "broker_email_subject": "Just Listed | Irreplaceable 15.68-Acre CarMax | I-95 Corridor | Baltimore MSA"
     },
     "first_seen": null,
-    "last_seen": null
+    "last_seen": null,
+    "score": 0,
+    "verdict": "STRUCTURAL_FAIL",
+    "structural_failures": [
+      "not_bonus_dep_eligible",
+      "roof=None_not_tenant"
+    ],
+    "score_components": {},
+    "score_notes": []
   },
   {
     "source": "sands_ig",
@@ -138,7 +164,16 @@
       "parser_note": "Address regex fallback: no street number; property is along North Broadway Avenue"
     },
     "first_seen": null,
-    "last_seen": null
+    "last_seen": null,
+    "score": 0,
+    "verdict": "STRUCTURAL_FAIL",
+    "structural_failures": [
+      "lease_type=None_not_absolute_nnn",
+      "not_bonus_dep_eligible",
+      "roof=None_not_tenant"
+    ],
+    "score_components": {},
+    "score_notes": []
   },
   {
     "source": "sands_ig",
@@ -174,7 +209,16 @@
       "parser_note": "Address regex fallback: '&' in multi-address '3636 & 3638 Clarksville Pike' blocked _SIG_ADDR match"
     },
     "first_seen": null,
-    "last_seen": null
+    "last_seen": null,
+    "score": 0,
+    "verdict": "STRUCTURAL_FAIL",
+    "structural_failures": [
+      "lease_type=None_not_absolute_nnn",
+      "not_bonus_dep_eligible",
+      "roof=None_not_tenant"
+    ],
+    "score_components": {},
+    "score_notes": []
   },
   {
     "source": "sands_ig",
@@ -211,6 +255,15 @@
       "parser_note": "Address regex fallback: comma in multi-address '2816, 2808 & 2800 Central Drive' broke _SIG_ADDR"
     },
     "first_seen": null,
-    "last_seen": null
+    "last_seen": null,
+    "score": 0,
+    "verdict": "STRUCTURAL_FAIL",
+    "structural_failures": [
+      "lease_type=nnn_not_absolute_nnn",
+      "not_bonus_dep_eligible",
+      "roof=None_not_tenant"
+    ],
+    "score_components": {},
+    "score_notes": []
   }
 ]
