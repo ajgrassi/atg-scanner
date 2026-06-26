@@ -33,14 +33,14 @@ log = get_logger(__name__)
 
 # "at 275 Enterprise Drive in Valdosta, GA"
 # "at 7384-7392 Industry Drive in North Charleston, SC"
-# "at 2852 Holcomb Bridge Road in Alpharetta, GA"
+# "at 3327 & 3407 S Lake Drive in Texarkana, TX"  (& in multi-parcel addresses)
 _SIG_ADDR = re.compile(
     r"\bat\s+"
-    r"(\d[\w\s\-\.\,']{3,80}?)"   # street (starting with digit)
+    r"(\d[\w\s\-\.\,'&]{3,80}?)"   # street (starting with digit)
     r"\s+in\s+"
     r"([A-Za-z][A-Za-z\s\-\.]{1,40}?)"  # city
     r",\s*"
-    r"([A-Z]{2}|[A-Za-z]+)",             # state abbrev or full name
+    r"([A-Z]{2}(?![a-z])|[A-Za-z]+)",     # "TX" (abbrev, not followed by more letters) OR "Texas"
     re.I,
 )
 
