@@ -46,6 +46,9 @@ ALL_CHANNELS: tuple[Channel, ...] = (
 #: applies (see resolve_source()).
 SOURCES: dict[str, tuple[tuple[Channel, ...], str]] = {
     "noreply@crexi.com":               (("__route_by_subject__",), "crexi"),         # type: ignore[dict-item]
+    "emails@search.crexi.com":         (("__route_by_subject__",), "crexi"),         # type: ignore[dict-item]
+    "*@search.crexi.com":              (("__route_by_subject__",), "crexi"),         # type: ignore[dict-item]
+    "noreply@loopnet.com":             (("__route_by_subject__",), "loopnet"),       # type: ignore[dict-item]
     "alerts@loopnet.com":              (("__route_by_subject__",), "loopnet"),        # type: ignore[dict-item]
     "*@sandsig.com":                   (("car_wash_nnn", "ios"), "sands_ig"),
     "*@signnn.com":                    (("car_wash_nnn", "ios"), "sands_ig"),
