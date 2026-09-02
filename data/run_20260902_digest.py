@@ -1,0 +1,222 @@
+"""Build digest HTML for 2026-09-02 run."""
+from datetime import datetime, timezone
+
+RUN_DATE = "2026-09-02"
+RUN_DATE_DISPLAY = "Wed, Sep 02"
+now_str = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M UTC")
+
+EMAILS = [
+    {
+        "id": "1a05e619ec33a145",
+        "sender": "will@sandsig.com",
+        "subject": "New | 6 Chicken Express SLB | 6.00% CAP | 15-Yr Abs NNN | 10% Bumps | DFW & North TX",
+        "channel": "car_wash_nnn (Sands IG)",
+        "verdict": "OUT OF SCOPE",
+        "reason": "Fast-food QSR, not a car wash. 6.00% cap below ATG ≥7% target.",
+        "listings": [
+            {"name": "Chicken Express — Sherman, TX", "price": "$2,800,000", "cap": "6.00%"},
+            {"name": "Chicken Express — Allen, TX", "price": "$2,800,000", "cap": "6.00%"},
+            {"name": "Chicken Express — Fort Worth, TX", "price": "$2,800,000", "cap": "6.00%"},
+            {"name": "Chicken Express — Azle, TX", "price": "$2,800,000", "cap": "6.00%"},
+            {"name": "Chicken Express — Rowlett, TX", "price": "$2,800,000", "cap": "6.00%"},
+            {"name": "Chicken Express — Lake Worth, TX", "price": "$2,800,000", "cap": "6.00%"},
+        ],
+        "highlights": "15-yr Abs NNN SLB | 10% rent bumps | Strong TX trade areas (TI campus Sherman, Walmart nodes, Lockheed Martin Lake Worth)",
+        "broker": "Will Schuhmacher / Jordan Mulloy — will@SandsIG.com / 512.277.5924",
+    },
+    {
+        "id": "1a05e9907a65e2e9",
+        "sender": "skrepistman@sandsig.com",
+        "subject": "Just Listed | 7.00% Cap | Des Moines MSA | 2.5% Annual Increases | $129K Avg HH Income",
+        "channel": "car_wash_nnn (Sands IG)",
+        "verdict": "OUT OF SCOPE",
+        "reason": "Regional childcare facility. Not a car wash or IOS.",
+        "listings": [
+            {"name": "New Creations Child Care — 3004 NW 18th St, Ankeny, IA", "price": "$4,686,029", "cap": "7.00%"},
+        ],
+        "highlights": "12,182 SF | 11+ yrs remaining | 2.5% annual escalations | 2023 remodel | 20-location regional operator",
+        "broker": "Seth Krepistman — skrepistman@SandsIG.com / 512.543.7437",
+    },
+    {
+        "id": "1a05d919ab22f88f",
+        "sender": "carlosa@sandsig.com",
+        "subject": "$900K | 7.65% Cap | DFW MSA | Medical Investment-Grade Credit (Aa2) | 9 Yrs Remaining",
+        "channel": "car_wash_nnn (Sands IG)",
+        "verdict": "OUT OF SCOPE",
+        "reason": "Medical/healthcare NNN. Not a car wash or IOS. Price $900K below car wash size range.",
+        "listings": [
+            {"name": "Cook Children's Health — 805 S Clay St, Ennis, TX", "price": "$900,000", "cap": "7.65%"},
+        ],
+        "highlights": "3,536 SF | Aa2/Moody's credit | 9 yrs remaining | Built 2013, roof replaced 2022",
+        "broker": "Carlos Arizpe — carlosa@SandsIG.com / 737.270.7668",
+    },
+    {
+        "id": "1a05df5ef19e4d90",
+        "sender": "jfriberg@sandsig.com",
+        "subject": "Just Listed | Family Dollar | 10.50% CAP | Site Improvements Underway | Limited Competition",
+        "channel": "car_wash_nnn (Sands IG)",
+        "verdict": "OUT OF SCOPE",
+        "reason": "Dollar store, NN lease (not Abs NNN). Not a car wash or IOS.",
+        "listings": [
+            {"name": "Family Dollar — 21 Eagle Rest Rd, Cubero, NM", "price": "$1,141,904", "cap": "10.50%"},
+        ],
+        "highlights": "10,000 SF | NN+ lease | Isolated market (serves Sky City Hotel & Casino area) | Site improvements underway",
+        "broker": "Johnny Friberg / Andrew Ackerman — jfriberg@SandsIG.com / 404.459.6240",
+    },
+    {
+        "id": "1a05d2af1a161757",
+        "sender": "aanttila@sandsig.com",
+        "subject": "Just Listed | 100% State-Occupied Office | Government-Backed Tenancy | 10,800 SF | Mississippi",
+        "channel": "car_wash_nnn (Sands IG)",
+        "verdict": "OUT OF SCOPE",
+        "reason": "Government office, modified gross lease. Not a car wash or IOS.",
+        "listings": [
+            {"name": "Medicaid Plaza — 2776 Hwy 51 S, Senatobia, MS", "price": "$878,000", "cap": "8.50%"},
+        ],
+        "highlights": "10,800 SF | MS Division of Medicaid (100% state tenant) | Modified gross | $9.95 PSF rent | Hwy 51/I-55 corridor",
+        "broker": "Alex Anttila — aanttila@SandsIG.com / 754.216.1154",
+    },
+]
+
+EVENT = {
+    "id": "1a05ed2281b313cc",
+    "sender": "teresa@aec-kc.com",
+    "subject": "Alliance Investor Forum — October 7, 2026",
+    "detail": "Indian Hills Country Club, Kansas City. Evening: appetizers, cocktails, conversation. AEF oil & gas investor networking event.",
+}
+
+CREXI = {
+    "id": "1a05f2a51c4e95aa",
+    "sender": "emails@search.crexi.com",
+    "recipient": "andygrassi@gmail.com",
+    "subject": "12 New properties recommended for you",
+    "detail": "Bulk recommendation email (not a named saved-search alert). Lead property: 9400 Two Notch Road, Columbia, SC 29223. No ATG-channel properties identified from snippet.",
+}
+
+out_of_scope_rows = ""
+for e in EMAILS:
+    listings_html = "".join(
+        f"<li style='margin:2px 0;'><strong>{l['name']}</strong> — {l['price']} | {l['cap']} CAP</li>"
+        for l in e["listings"]
+    )
+    out_of_scope_rows += f"""
+<tr>
+  <td style="padding:10px 8px;border-bottom:1px solid #e2e8f0;vertical-align:top;">
+    <div style="font-weight:600;font-size:13px;">{e['sender']}</div>
+    <div style="font-size:11px;color:#64748b;margin-top:2px;">{e['subject']}</div>
+  </td>
+  <td style="padding:10px 8px;border-bottom:1px solid #e2e8f0;vertical-align:top;">
+    <ul style="margin:0;padding-left:16px;font-size:12px;">{listings_html}</ul>
+    <div style="font-size:11px;color:#64748b;margin-top:4px;">{e['highlights']}</div>
+  </td>
+  <td style="padding:10px 8px;border-bottom:1px solid #e2e8f0;vertical-align:top;font-size:12px;">
+    <span style="background:#e5e7eb;color:#374151;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;">OUT OF SCOPE</span><br>
+    <span style="color:#6b7280;font-size:11px;margin-top:3px;display:block;">{e['reason']}</span>
+  </td>
+  <td style="padding:10px 8px;border-bottom:1px solid #e2e8f0;vertical-align:top;font-size:11px;color:#64748b;">{e['broker']}</td>
+</tr>"""
+
+html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATG Deal Digest — {RUN_DATE_DISPLAY}</title>
+<style>
+  body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         font-size: 14px; color: #1e293b; max-width: 720px; margin: 0 auto; padding: 20px; }}
+  h1 {{ font-size: 20px; margin-bottom: 4px; }}
+  h2 {{ font-size: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin-top: 28px; color: #0f172a; }}
+  table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
+  th {{ padding: 8px; text-align: left; border-bottom: 2px solid #e2e8f0; background: #f8fafc;
+        font-size: 11px; text-transform: uppercase; color: #64748b; }}
+  .stat-box {{ background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;padding:10px 16px;
+               flex:1;min-width:80px;text-align:center; }}
+  .stat-label {{ font-size:10px;color:#64748b;text-transform:uppercase;margin-bottom:2px; }}
+  .stat-val {{ font-size:24px;font-weight:700; }}
+</style>
+</head>
+<body>
+<h1>ATG Deal Digest &mdash; {RUN_DATE_DISPLAY}</h1>
+<p style="color:#64748b;font-size:12px;margin-top:4px;">{now_str} &middot; ATG Deal Scanner v1</p>
+
+<!-- BANNER -->
+<div style="background:#f0f9ff;border:1px solid #38bdf8;border-radius:6px;padding:12px 14px;margin:16px 0;font-size:13px;">
+  <strong>Today: 7 emails processed &mdash; 0 scored listings, 5 out-of-scope Sands IG NNN, 1 AEF event invite, 1 Crexi bulk rec.</strong><br>
+  Sands IG continues to broadcast a wider mix of NNN retail/food/medical beyond car washes and IOS.
+  No ATG-channel matches today.
+</div>
+
+<!-- NOTABLE NEAR-MISS -->
+<h2>Near-Miss &mdash; Chicken Express SLB Portfolio (6 Sites, DFW/North TX)</h2>
+<div style="border:1px solid #fde68a;background:#fffbeb;border-radius:6px;padding:14px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;">NEAR-MISS — NNN QSR</span>
+      <div style="font-weight:600;font-size:15px;margin-top:6px;">6 &times; Chicken Express &mdash; DFW &amp; North Texas</div>
+      <div style="color:#64748b;font-size:13px;margin-top:2px;">$2,800,000 each &middot; 6.00% CAP &middot; Abs NNN SLB &middot; 15-yr term &middot; 10% bumps</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:13px;">
+    <strong>Why it surfaced:</strong> Sands IG blast; lease structure (Abs NNN, 15yr, 10% bumps ≈ 2%/yr) matches several car wash gate criteria on paper.<br>
+    <strong>Why it doesn&apos;t score:</strong> Chicken Express is a QSR (quick-service chicken), not a car wash. 6.00% cap is below the ATG ≥7% car wash target. Channel mismatch &mdash; no cost-seg story comparable to car wash equipment.
+  </div>
+  <div style="margin-top:8px;font-size:12px;color:#64748b;">
+    Locations: Sherman (TI campus trade area), Allen (Collin County), Fort Worth (Walmart node), Azle (Walmart outparcel), Rowlett, Lake Worth (Lockheed Martin).<br>
+    Broker: Will Schuhmacher &mdash; will@SandsIG.com / 512.277.5924
+  </div>
+</div>
+
+<!-- OUT OF SCOPE TABLE -->
+<h2>Out of Scope &mdash; Sands IG NNN (5 listings)</h2>
+<p style="font-size:12px;color:#64748b;margin-bottom:8px;">
+  All five came from <code>@sandsig.com</code> addresses (parser channel: car_wash_nnn / ios).
+  None are car washes or industrial outdoor storage; all are out of ATG scope.
+</p>
+<table>
+<thead>
+  <tr>
+    <th>Broker / Subject</th>
+    <th>Listing(s)</th>
+    <th>Verdict</th>
+    <th>Contact</th>
+  </tr>
+</thead>
+<tbody>{out_of_scope_rows}
+</tbody>
+</table>
+
+<!-- EVENT INVITE -->
+<h2>AEF Event Invite &mdash; Alliance Investor Forum</h2>
+<div style="border:1px solid #e2e8f0;border-radius:6px;padding:12px 14px;font-size:13px;">
+  <strong>October 7, 2026 &mdash; Indian Hills Country Club, Kansas City</strong><br>
+  <span style="color:#64748b;">Appetizers, cocktails &amp; conversation with AEF oil &amp; gas investors.
+  Sender: teresa@aec-kc.com</span>
+</div>
+
+<!-- CREXI BULK -->
+<h2>Crexi Bulk Recommendation</h2>
+<div style="border:1px solid #e2e8f0;border-radius:6px;padding:12px 14px;font-size:13px;color:#64748b;">
+  12 properties to andygrassi@gmail.com &mdash; not a named saved-search alert.
+  Lead snippet: 9400 Two Notch Road, Columbia, SC 29223. No ATG-channel properties identified.
+  <em>Log into Crexi to review if needed.</em>
+</div>
+
+<!-- SCAN STATS -->
+<h2>Scan Stats</h2>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
+  <div class="stat-box"><div class="stat-label">Emails</div><div class="stat-val">7</div></div>
+  <div class="stat-box"><div class="stat-label">Scored</div><div class="stat-val">0</div></div>
+  <div class="stat-box"><div class="stat-label">Out of Scope</div><div class="stat-val">5</div></div>
+  <div class="stat-box"><div class="stat-label">Parser Fails</div><div class="stat-val">0</div></div>
+  <div class="stat-box"><div class="stat-label">Price Drops</div><div class="stat-val">0</div></div>
+</div>
+<p style="margin-top:16px;font-size:12px;color:#9ca3af;">
+  Sources active: Sands IG (5 emails), AEF/teresa (1 event), Crexi (1 bulk rec)<br>
+  Run: {now_str} &middot; ATG Deal Scanner
+</p>
+
+</body>
+</html>"""
+
+print(html)
